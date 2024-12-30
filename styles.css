@@ -306,3 +306,27 @@ body {
     }
 }
 
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
+    grid-auto-rows: 300px; /* Base height for rows */
+    gap: 1.5rem; /* Spacing between cards */
+}
+
+.news-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align text to the bottom */
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.news-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images scale properly */
+}
