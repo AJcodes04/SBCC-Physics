@@ -16,7 +16,7 @@
             <!-- Logo or Image -->
             <a href="/" class="d-flex align-items-center text-decoration-none">
                 <img src="./Images/SBCCLogoWhite.png" alt="SBCC Logo" style="height: 0px; margin-right: 10px;">
-                <span class="text-light fw-bold text align-items-center">SBCC Department of Physics</span>
+                <span class="text-light fw-bold text align-items-center">Department of Physics & Engineering</span>
             </a>
 
         </div>
@@ -25,15 +25,16 @@
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-red shadow-sm py-3 border border-black">
             <div class="container">
-                <a class="d-flex align-items-center navbar-brand" href="#">
-                    <img src="./Images/SBCCLogoWhite.png" alt="Logo" class="me-2" style="height: 80px;">
+                <!-- Replaced <a> with <div> to make the title non-clickable -->
+                <div class="d-flex align-items-center navbar-brand">
+                    <img src="../Images/SBCCLogoWhite.png" alt="Logo" class="me-2" style="height: 80px;">
                     <div class="vr bg-black mx-2"></div>
                     <div>
                         <span class="d-block fw-bold text-uppercase" style="font-size: 20px;">Santa Barbara City
                             College</span>
                         <span class="d-block" style="font-size: 37px;">Physics & Engineering</span>
                     </div>
-                </a>
+                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -41,9 +42,9 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link " href="../index.html">Home</a>
                         </li>
-
+        
                         <!-- SBCC Pipeline Link -->
                         <li class="nav-item">
                             <a class="nav-link" href="https://pipeline.sbcc.edu/" target="_blank">
@@ -54,7 +55,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="facultyDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">Faculty</a>
                             <ul class="dropdown-menu" aria-labelledby="facultyDropdown">
-                                <li><a class="dropdown-item" href="./MikeYoung.html">Mike Young</a></li>
+                                <li><a class="dropdown-item" href="../Faculty/MikeYoung.html">Mike Young</a></li>
                                 <li><a class="dropdown-item" href="#">Douglas Folsom</a></li>
                                 <li><a class="dropdown-item" href="#">Hector Gamero-Jauregui</a></li>
                                 <li><a class="dropdown-item" href="#">Amy Swearngin</a></li>
@@ -79,6 +80,7 @@
                 </div>
             </div>
         </nav>
+
     </header>
 
     <!-- Carousel with Diagonal Line Overlays -->
@@ -111,22 +113,37 @@
 
 
 
-        <section class="py-5" style="background-color: #991c2d;">
+        <section class="hero-section py-5">
             <div class="container text-white">
                 <div class="row g-4 row-cols-1 row-cols-lg-3">
-        
                     <!-- Column 1: Programs -->
                     <div class="col">
-                        <a href="#" class="d-flex align-items-center text-decoration-none text-white h-100">
+                        <a href="https://www.sbcc.edu/physics-engineering/index.php" class="d-flex align-items-center text-decoration-none text-white h-100">
                             <!-- Icon -->
                             <div class="icon-square d-inline-flex align-items-center justify-content-center flex-shrink-0 me-3"
                                 style="width: 2rem; height: 2rem;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
                                     class="bi bi-laptop" viewBox="0 0 16 16">
                                     <path d="M2.5 12.5a.5.5 0 0 1 0-1H3v-7A1.5 1.5 0 0 1 
-                           4.5 3h7A1.5 1.5 0 0 1 13 4.5v7h.5a.5.5 0 0 1 
-                           0 1v.5A1.5 1.5 0 0 1 12 15H4a1.5 1.5 0 0 1-1.5-1.5v-.5z
-                           M4 4.5v7h8v-7A.5.5 0 0 0 11.5 4h-7a.5.5 0 0 0-.5.5z" />
+                                       4.5 3h7A1.5 1.5 0 0 1 13 4.5v7h.5a.5.5 0 0 1 
+                                       0 1v.5A1.5 1.5 0 0 1 12 15H4a1.5 1.5 0 0 1-1.5-1.5v-.5z
+                                       M7.5-.141 c.654-.689 1.782-.886 3.112-.752
+                                       1.234.124 2.503.523 3.388.893
+                                       v9.923c-.918-.35-2.107-.692
+                                       -3.287-.81-1.18-.12-2.37-.461-3.287-.811zM8 1.783C7.015
+                                       .936 5.587.81 4.287.94c-1.514
+                                       .153-3.042.672-3.994 1.105A.5.5
+                                       0 0 0 0 2.5v11a.5.5 0 0 0
+                                       .707.455c.882-.4 2.303-.881
+                                       3.68-1.02 1.409-.142 2.59
+                                       .087 3.223.877a.5.5 0 0 0
+                                       .78 0c.633-.79 1.814-1.019
+                                       3.222-.877 1.378.139 2.8.62
+                                       3.681 1.02A.5.5 0 0 0 16 
+                                       13.5v-11a.5.5 0 0 0-.293
+                                       -.455c-.952-.433-2.48-.952
+                                       -3.994-1.105C10.413.809 8.985
+                                       .936 8 1.783z" />
                                 </svg>
                             </div>
                             <!-- Text -->
@@ -136,14 +153,13 @@
                             </div>
                         </a>
                     </div>
-        
                     <!-- Column 2: Tutoring -->
                     <div class="col">
                         <a href="#" class="d-flex align-items-center text-decoration-none text-white h-100">
                             <div class="icon-square d-inline-flex align-items-center justify-content-center flex-shrink-0 me-3"
                                 style="width: 3rem; height: 3rem;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-richtext"
-                                    viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-file-earmark-richtext" viewBox="0 0 16 16">
                                     <path
                                         d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z" />
                                     <path
@@ -156,7 +172,6 @@
                             </div>
                         </a>
                     </div>
-        
                     <!-- Column 3: Courses -->
                     <div class="col">
                         <a href="#" class="d-flex align-items-center text-decoration-none text-white h-100">
@@ -165,28 +180,27 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
                                     class="bi bi-book" viewBox="0 0 16 16">
                                     <path d="M1 2.828c.885-.37 
-                           2.154-.769 3.388-.893 1.33-.134 
-                           2.458.063 3.112.752v9.746c-.935
-                           -.53-2.12-.603-3.213-.493-1.18
-                           .12-2.37.461-3.287.811zm7.5-.141
-                           c.654-.689 1.782-.886 3.112-.752
-                           1.234.124 2.503.523 3.388.893
-                           v9.923c-.918-.35-2.107-.692
-                           -3.287-.81-1.094-.111-2.278
-                           -.039-3.213.492zM8 1.783C7.015
-                           .936 5.587.81 4.287.94c-1.514
-                           .153-3.042.672-3.994 1.105A.5.5
-                           0 0 0 0 2.5v11a.5.5 0 0 0
-                           .707.455c.882-.4 2.303-.881
-                           3.68-1.02 1.409-.142 2.59
-                           .087 3.223.877a.5.5 0 0 0
-                           .78 0c.633-.79 1.814-1.019
-                           3.222-.877 1.378.139 2.8.62
-                           3.681 1.02A.5.5 0 0 0 16 
-                           13.5v-11a.5.5 0 0 0-.293
-                           -.455c-.952-.433-2.48-.952
-                           -3.994-1.105C10.413.809 8.985
-                           .936 8 1.783" />
+                                       2.154-.769 3.388-.893 1.33-.134 
+                                       2.458.063 3.112.752v9.746c-.935
+                                       -.53-2.12-.603-3.213-.493-1.18
+                                       .12-2.37.461-3.287.811zm7.5-.141
+                                       c.654-.689 1.782-.886 3.112-.752
+                                       1.234.124 2.503.523 3.388.893
+                                       v9.923c-.918-.35-2.107-.692
+                                       -3.287-.81-1.18-.12-2.37-.461-3.287-.811zM8 1.783C7.015
+                                       .936 5.587.81 4.287.94c-1.514
+                                       .153-3.042.672-3.994 1.105A.5.5
+                                       0 0 0 0 2.5v11a.5.5 0 0 0
+                                       .707.455c.882-.4 2.303-.881
+                                       3.68-1.02 1.409-.142 2.59
+                                       .087 3.223.877a.5.5 0 0 0
+                                       .78 0c.633-.79 1.814-1.019
+                                       3.222-.877 1.378.139 2.8.62
+                                       3.681 1.02A.5.5 0 0 0 16 
+                                       13.5v-11a.5.5 0 0 0-.293
+                                       -.455c-.952-.433-2.48-.952
+                                       -3.994-1.105C10.413.809 8.985
+                                       .936 8 1.783z" />
                                 </svg>
                             </div>
                             <div>
@@ -195,10 +209,10 @@
                             </div>
                         </a>
                     </div>
-        
                 </div>
             </div>
         </section>
+
 
 
 
@@ -219,7 +233,7 @@
                             <div class="text-center p-3 position-relative" style="z-index: 2; padding-top: 4rem;">
                                 <img src="./Images/mike_young_photo1.jpg" alt="Professor" class="rounded-circle mb-3"
                                     style="width: 100px; height: 100px; object-fit: cover;">
-                                <h5 class="mt-2">Mike Young</h5>
+                                <h5 class="mt-2"><a href="./Faculty/MikeYoung.html" class="text-decoration-none" style="color: black;">Mike Young</a></h5>
                                 <p class="text-muted">Department Chair / Physics Professor</p>
                                 <p class="small">PHYS 102, PHYS 122, PHYS 123</p>
                                 <p class="small">Specializes in advanced mechanics and quantum physics.</p>
@@ -485,7 +499,7 @@
                         <div class="news-card">
                             
                             <div class="news-card__image"
-                                style="background: url('./Images/Physics news/physorg.png') center/cover;">
+                                style="background: url('./Images/Physics news/phys-org.jpg') center/cover;">
                             </div>
                             <div class="news-card__info">
                                 <span class="news-card__page">Physics News & Research</span>
@@ -506,7 +520,7 @@
                                 
                             </div>
                             <div class="news-card__image"
-                                style="background: url('./Images/Physics news/sciencedaily.png') center/cover;">
+                                style="background: url('./Images/Physics news/Science-Daily.webp') center/cover;">
                             </div>
                             <div class="news-card__info">
                                 <span class="news-card__page">Physics & Astronomy</span>
@@ -526,35 +540,29 @@
             </div>
             </div>
         </section>
-
-
-
-
-
-
-
-        <section class="footer">
-            <div class="container">
-                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                    <p class="col-md-4 mb-0 text-body-secondary">© 2024 SBCC Web Development Club</p>
-
-                    <a href="/"
-                        class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                        <svg class="bi me-2" width="40" height="32">
-                            <use xlink:href="#bootstrap"></use>
-                        </svg>
-                    </a>
-
-                    <ul class="nav col-md-4 justify-content-end">
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-                    </ul>
-                </footer>
-            </div>
         </section>
+
+
+<section class="footer" style="background-color: #991c2d;">
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center my-4 border-top"
+            style="color: white;">
+            <p class="col-md-4 mb-0 text-white">© 2024 SBCC Web Development Club</p>
+
+            <a href="https://sbccwebdevsignuppage.onrender.com/"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+                <img src="./Images/SBCCNObg copy.png" alt="SBCC Logo"  class="d-inline-block">
+            </a>
+
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2" style="color: white;">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2" style="color: white;">About</a></li>
+            </ul>
+        </footer>
+    </div>
+</section>
+
+
 
 
 
