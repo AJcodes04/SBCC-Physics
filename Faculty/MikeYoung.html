@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mike Young</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
     <header>
-        <div id="block-header-bar" class="d-flex align-items-center justify-content-center"
-            style="background-color: #333; height: 30px; padding: 0 20px;">
+        <div id="block-header-bar" class="d-flex align-items-center justify-content-center bg-dark py-1 px-3">
             <!-- Logo or Image -->
             <a href="/" class="d-flex align-items-center text-decoration-none">
-                <img src="./Images/SBCCLogoWhite.png" alt="SBCC Logo" style="height: 0px; margin-right: 10px;">
-                <span class="text-light fw-bold text align-items-center">SBCC Department of Physics</span>
+                <img src="../Images/sbcclogononame.png" alt="SBCC Logo" class="d-none d-md-block me-2"
+                    style="height: 0px;">
+                <span class="text-light fw-bold">Department of Physics & Engineering</span>
             </a>
-    
         </div>
-    
-    
-    
+
         <nav class="navbar navbar-expand-lg navbar-dark bg-red shadow-sm py-3 border border-black">
             <div class="container">
-                <a class="d-flex align-items-center navbar-brand" href="#">
-                    <img src="./Images/SBCCLogoWhite.png" alt="Logo" class="me-2" style="height: 80px;">
+                <div class="d-flex align-items-center navbar-brand">
+                    <img src="../Images/SBCCLogoWhite.png" alt="Logo" class="me-2" style="height: 80px;">
                     <div class="vr bg-black mx-2"></div>
                     <div>
                         <span class="d-block fw-bold text-uppercase" style="font-size: 20px;">Santa Barbara City
                             College</span>
                         <span class="d-block" style="font-size: 37px;">Physics & Engineering</span>
                     </div>
-                </a>
+                </div>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -39,9 +39,9 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link " href="../index.html">Home</a>
                         </li>
-                        
+
                         <!-- SBCC Pipeline Link -->
                         <li class="nav-item">
                             <a class="nav-link" href="https://pipeline.sbcc.edu/" target="_blank">
@@ -52,8 +52,8 @@
                             <a class="nav-link dropdown-toggle" href="#" id="facultyDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">Faculty</a>
                             <ul class="dropdown-menu" aria-labelledby="facultyDropdown">
-                                <li><a class="dropdown-item" href="#">Mike Young</a></li>
-                                <li><a class="dropdown-item" href="#">Douglas Folsom</a></li>
+                                <li><a class="dropdown-item" href="../Faculty/MikeYoung.html">Mike Young</a></li>
+                                <li><a class="dropdown-item" href="../Faculty/DouglasFolsom.html">Douglas Folsom</a></li>
                                 <li><a class="dropdown-item" href="#">Hector Gamero-Jauregui</a></li>
                                 <li><a class="dropdown-item" href="#">Amy Swearngin</a></li>
                                 <li><a class="dropdown-item" href="#">Ron Ferril</a></li>
@@ -78,83 +78,162 @@
             </div>
         </nav>
     </header>
+
+    <main>
+        <!-- Profile Section -->
+        <section class="hero bg-light">
+            <div class="container py-5">
+                <div class="profile-card d-flex flex-column flex-md-row align-items-center shadow p-4 rounded">
+                    <!-- Left Content: Name and Description -->
+                    <div class="profile-info me-md-4 mb-4 mb-md-0 text-start">
+                        <h1 class="fw-bold mb-3">Mike Young</h1>
+                        <p class="text-muted fs-5">
+                            Department Chair / Professor<br>
+                            Specializes in advanced mechanics and quantum physics and blah blah blah<br>
+                            Instructor for PHYS 102, PHYS 122, and PHYS 123.
+                        </p>
+                        <!-- Email -->
+                        <p class="fs-6">
+                            <strong>Email:</strong>
+                            <a href="mailto:young@sbcc.edu" class="text-primary text-decoration-none">
+                                young@sbcc.edu
+                            </a>
+                        </p>
+                    </div>
+        
+                    <!-- Right Content: Image -->
+                    <div class="profile-image text-center">
+                        <img src="../Images/mike_young_photo.png" alt="Mike Young" class="rounded shadow-sm profile-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Schedule Section -->
+        <section class="schedule py-5 bg-light">
+            <div class="container">
+                <h2 class="fw-bold text-start mb-4">Spring 2025 Schedule</h2>
+                <div class="schedule-card p-4 shadow rounded">
+                    <img src="../Images/Schedules/Coursicle - Mike Young.png" alt="Mike's Schedule"
+                        class="w-100 rounded">
+                </div>
+            </div>
+        </section>
+
+        <!-- Class Resources Section -->
+        <section class="hero class-resources bg-light py-5">
+            <div class="container">
+                <h2 class="fw-bold text-start mb-5 class-resources-header">Class Resources</h2>
+                <div class="row g-4">
+                    <!-- Class Resource Card 1 -->
+                    <div class="col-md-6">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold text-start">PHYS 102 - Introductory Physics For Science Majors</h5>
+                                <ul class="list-unstyled mb-3">
+                                    <li><a href="#" class="text-body">📘 Textbook</a></li>
+                                    <li><a href="#" class="text-body">📄 Syllabus</a></li>
+                                    <li><a href="#" class="text-body">📝 Past Notes</a></li>
+                                </ul>
+                                <div class="ratio ratio-16x9">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/wqA-KQeCoSA?list=PLz005lrvfhuiYL2uLIR1xlR6IWlUweecH"
+                                        title="PHYS 102 YouTube Playlist" allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Class Resource Card 2 -->
+                    <div class="col-md-6">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold text-start">PHYS 121 - Mechanics of Solids and Fluids</h5>
+                                <ul class="list-unstyled mb-3">
+                                    <li><a href="#" class="text-body">📘 Textbook</a></li>
+                                    <li><a href="#" class="text-body">📄 Syllabus</a></li>
+                                    <li><a href="#" class="text-body">📝 Past Notes</a></li>
+                                </ul>
+                                <div class="ratio ratio-16x9">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/oRwJYlYULXo?list=PLpMn6V7JuggHkn1Jlt0104uNPmpnLFl-G"
+                                        title="SBCC Physics YouTube Channel"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Class Resource Card 3 -->
+                    <div class="col-md-6">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold text-start">PHYS 122 - Electricity and Magnetism</h5>
+                                <ul class="list-unstyled mb-3">
+                                    <li><a href="#" class="text-body">📘 Textbook</a></li>
+                                    <li><a href="#" class="text-body">📄 Syllabus</a></li>
+                                    <li><a href="#" class="text-body">📝 Past Notes</a></li>
+                                </ul>
+                                <div class="ratio ratio-16x9">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/nspTcJFqFXw?list=PLpMn6V7JuggHTQfh0aBM5OD4RObeyndsP"
+                                        title="YouTube Playlist"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Class Resource Card 4 -->
+                    <div class="col-md-6">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold text-start">PHYS 123 - Heat, Light, and Modern Physics
+                                </h5>
+                                <ul class="list-unstyled mb-3">
+                                    <li><a href="#" class="text-body">📘 Textbook</a></li>
+                                    <li><a href="#" class="text-body">📄 Syllabus</a></li>
+                                    <li><a href="#" class="text-body">📝 Past Notes</a></li>
+                                </ul>
+                                <div class="ratio ratio-16x9">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/HwUp8Crw6iM?list=PLpMn6V7JuggFnfsb8RMxrwGugD7APF6d9"
+                                        title="PHYS 124 YouTube Playlist" allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="footer" style="background-color: #991c2d;">
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center my-4 border-top"
+                style="color: white;">
+                <p class="col-md-4 mb-0 text-white">© 2024 SBCC Web Development Club</p>
     
-<section class="hero bg-light">
-    <div class="container py-5">
-        <div class="profile-card d-flex align-items-center shadow p-4 rounded">
-            <!-- Left Content: Name and Description -->
-            <div class="profile-info me-4">
-                <h1 class="fw-bold mb-3">Mike Young</h1>
-                <p class="text-muted fs-5 mb-0">
-                    Department Chair / Professor <br>
-                    Specializes in advanced mechanics and quantum physics. <br>
-                    Instructor for PHYS 102, PHYS 122, and PHYS 123.
-                </p>
-            </div>
-
-            <!-- Right Content: Image -->
-            <div class="profile-image">
-                <img src="./Images/mike_young_photo1.jpg" alt="Mike Young" class="rounded shadow-sm">
-            </div>
+                <a href="https://sbccwebdevsignuppage.onrender.com/"
+                    class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+                    <img src="../Images/SBCCNObg copy.png" alt="SBCC Logo" class="d-inline-block">
+                </a>
+    
+                <ul class="nav col-md-4 justify-content-end">
+                    <li class="nav-item"><a href="../index.html" class="nav-link px-2" style="color: white;">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2" style="color: white;">About</a></li>
+                </ul>
+            </footer>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="hero bg-white">
-    <div class="container py-5">
-        <h2 class="text-center mb-4 title">Schedule: Spring 2025</h2>
-        <div class="schedule-table shadow p-4 rounded">
-            <!-- Schedule Header -->
-            <div class="row text-center fw-bold">
-                <div class="col">Monday</div>
-                <div class="col">Tuesday</div>
-                <div class="col">Wednesday</div>
-                <div class="col">Thursday</div>
-                <div class="col">Friday</div>
-            </div>
-            <div class="row">
-                <!-- Monday -->
-                <div class="col">
-                    <div class="class-block bg-light-red">
-                        <p class="mb-1 fw-bold">PHYS 102</p>
-                        <p class="mb-0">9:00 AM - 10:30 AM</p>
-                    </div>
-                </div>
-                <!-- Tuesday -->
-                <div class="col">
-                    <div class="class-block bg-light-red">
-                        <p class="mb-1 fw-bold">PHYS 122</p>
-                        <p class="mb-0">10:45 AM - 12:15 PM</p>
-                    </div>
-                </div>
-                <!-- Wednesday -->
-                <div class="col">
-                    <div class="class-block bg-light-red">
-                        <p class="mb-1 fw-bold">PHYS 123</p>
-                        <p class="mb-0">1:00 PM - 2:30 PM</p>
-                    </div>
-                </div>
-                <!-- Thursday -->
-                <div class="col">
-                    <div class="class-block bg-light-red">
-                        <p class="mb-1 fw-bold">PHYS 122</p>
-                        <p class="mb-0">9:00 AM - 10:30 AM</p>
-                    </div>
-                </div>
-                <!-- Friday -->
-                <div class="col">
-                    <div class="class-block bg-light-red">
-                        <p class="mb-1 fw-bold">Office Hours</p>
-                        <p class="mb-0">1:00 PM - 3:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
