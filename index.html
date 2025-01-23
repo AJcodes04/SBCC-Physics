@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBCC Physics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div id="block-header-bar" class="d-flex align-items-center justify-content-center"
+            style="background-color: #333; height: 30px; padding: 0 20px;">
+            <!-- Logo or Image -->
+            <a href="/" class="d-flex align-items-center text-decoration-none">
+                <img src="./Images/SBCCLogoWhite.png" alt="SBCC Logo" style="height: 0px; margin-right: 10px;">
+                <span class="text-light fw-bold text align-items-center">SBCC Department of Physics</span>
+            </a>
+
+        </div>
+
+
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-red shadow-sm py-3 border border-black">
+            <div class="container">
+                <a class="d-flex align-items-center navbar-brand" href="#">
+                    <img src="./Images/SBCCLogoWhite.png" alt="Logo" class="me-2" style="height: 80px;">
+                    <div class="vr bg-black mx-2"></div>
+                    <div>
+                        <span class="d-block fw-bold text-uppercase" style="font-size: 20px;">Santa Barbara City
+                            College</span>
+                        <span class="d-block" style="font-size: 37px;">Physics & Engineering</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+
+                        <!-- SBCC Pipeline Link -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://pipeline.sbcc.edu/" target="_blank">
+                                SBCC Pipeline
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="facultyDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Faculty</a>
+                            <ul class="dropdown-menu" aria-labelledby="facultyDropdown">
+                                <li><a class="dropdown-item" href="./MikeYoung.html">Mike Young</a></li>
+                                <li><a class="dropdown-item" href="#">Douglas Folsom</a></li>
+                                <li><a class="dropdown-item" href="#">Hector Gamero-Jauregui</a></li>
+                                <li><a class="dropdown-item" href="#">Amy Swearngin</a></li>
+                                <li><a class="dropdown-item" href="#">Ron Ferril</a></li>
+                                <li><a class="dropdown-item" href="#">Louise Bretz</a></li>
+                                <li><a class="dropdown-item" href="#">Lynne Stark</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Courses Descriptions</a>
+                            <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                                <li><a class="dropdown-item"
+                                        href="https://catalog.sbcc.edu/academic-departments/physics/#creditcoursestext">Physics
+                                        Courses</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://catalog.sbcc.edu/academic-departments/engineering/#creditcoursestext">Engineering
+                                        Courses</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carousel with Diagonal Line Overlays -->
+    <div id="mainCarousel" class="carousel slide " data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./Images/Random/DouglasSpeaking.png" class="d-block w-100" alt="First Slide">
+                
+            </div>
+            <div class="carousel-item">
+                <img src="./Images/Sean Kelly Astronomy.png" class="d-block w-100" alt="Second Slide">
+                
+            </div>
+            <div class="carousel-item">
+                <img src="./Images/Physics Building.png" class="d-block w-100" alt="Third Slide">
+                
+            </div>
+        </div>
+    
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+        <section class="py-5" style="background-color: #991c2d;">
+            <div class="container text-white">
+                <div class="row g-4 row-cols-1 row-cols-lg-3">
+        
+                    <!-- Column 1: Programs -->
+                    <div class="col">
+                        <a href="#" class="d-flex align-items-center text-decoration-none text-white h-100">
+                            <!-- Icon -->
+                            <div class="icon-square d-inline-flex align-items-center justify-content-center flex-shrink-0 me-3"
+                                style="width: 2rem; height: 2rem;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                    class="bi bi-laptop" viewBox="0 0 16 16">
+                                    <path d="M2.5 12.5a.5.5 0 0 1 0-1H3v-7A1.5 1.5 0 0 1 
+                           4.5 3h7A1.5 1.5 0 0 1 13 4.5v7h.5a.5.5 0 0 1 
+                           0 1v.5A1.5 1.5 0 0 1 12 15H4a1.5 1.5 0 0 1-1.5-1.5v-.5z
+                           M4 4.5v7h8v-7A.5.5 0 0 0 11.5 4h-7a.5.5 0 0 0-.5.5z" />
+                                </svg>
+                            </div>
+                            <!-- Text -->
+                            <div>
+                                <h3 class="fs-2 mb-1 underlined-title">Programs</h3>
+                                <p class="mb-0">Discover our Physics &amp; Engineering degree programs and certificates.</p>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <!-- Column 2: Tutoring -->
+                    <div class="col">
+                        <a href="#" class="d-flex align-items-center text-decoration-none text-white h-100">
+                            <div class="icon-square d-inline-flex align-items-center justify-content-center flex-shrink-0 me-3"
+                                style="width: 3rem; height: 3rem;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-richtext"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z" />
+                                    <path
+                                        d="M4.5 12.5A.5.5 0 0 1 5 12h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5m0-2A.5.5 0 0 1 5 10h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5m1.639-3.708 1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V8.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V8s1.54-1.274 1.639-1.208M6.25 6a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="fs-2 mb-1 underlined-title">Physics News</h3>
+                                <p class="mb-0">Free study support for all Physics &amp; Engineering courses.</p>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <!-- Column 3: Courses -->
+                    <div class="col">
+                        <a href="#" class="d-flex align-items-center text-decoration-none text-white h-100">
+                            <div class="icon-square d-inline-flex align-items-center justify-content-center flex-shrink-0 me-3"
+                                style="width: 2rem; height: 2rem;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                    class="bi bi-book" viewBox="0 0 16 16">
+                                    <path d="M1 2.828c.885-.37 
+                           2.154-.769 3.388-.893 1.33-.134 
+                           2.458.063 3.112.752v9.746c-.935
+                           -.53-2.12-.603-3.213-.493-1.18
+                           .12-2.37.461-3.287.811zm7.5-.141
+                           c.654-.689 1.782-.886 3.112-.752
+                           1.234.124 2.503.523 3.388.893
+                           v9.923c-.918-.35-2.107-.692
+                           -3.287-.81-1.094-.111-2.278
+                           -.039-3.213.492zM8 1.783C7.015
+                           .936 5.587.81 4.287.94c-1.514
+                           .153-3.042.672-3.994 1.105A.5.5
+                           0 0 0 0 2.5v11a.5.5 0 0 0
+                           .707.455c.882-.4 2.303-.881
+                           3.68-1.02 1.409-.142 2.59
+                           .087 3.223.877a.5.5 0 0 0
+                           .78 0c.633-.79 1.814-1.019
+                           3.222-.877 1.378.139 2.8.62
+                           3.681 1.02A.5.5 0 0 0 16 
+                           13.5v-11a.5.5 0 0 0-.293
+                           -.455c-.952-.433-2.48-.952
+                           -3.994-1.105C10.413.809 8.985
+                           .936 8 1.783" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="fs-2 mb-1 underlined-title">Courses</h3>
+                                <p class="mb-0">Explore Physics &amp; Engineering Courses</p>
+                            </div>
+                        </a>
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="hero circle bg-light professors-bg">
+            <div class="container">
+                <h2 class="mb-4 title ">Meet Our Physics and Engineering Team</h2>
+                <div class="row">
+                    <!-- Mike Young -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card shadow-sm position-relative" style="overflow: hidden;">
+                            <!-- Background Image -->
+                            <div
+                                style="height: 30%; width: 100%; background: url('./Images/YoungsBG.png') no-repeat center center; background-size: cover; position: absolute; top: 0; z-index: 1; opacity: 0.6;">
+                            </div>
+                            <!-- Foreground Content -->
+                            <div class="text-center p-3 position-relative" style="z-index: 2; padding-top: 4rem;">
+                                <img src="./Images/mike_young_photo1.jpg" alt="Professor" class="rounded-circle mb-3"
+                                    style="width: 100px; height: 100px; object-fit: cover;">
+                                <h5 class="mt-2">Mike Young</h5>
+                                <p class="text-muted">Department Chair / Physics Professor</p>
+                                <p class="small">PHYS 102, PHYS 122, PHYS 123</p>
+                                <p class="small">Specializes in advanced mechanics and quantum physics.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Douglas Folsom -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card shadow-sm position-relative" style="overflow: hidden;">
+                            <!-- Background Image -->
+                            <div
+                                style="height: 30%; width: 100%; background: url('./Images/douglasBG.png') no-repeat center center; background-size: cover; position: absolute; top: 0; z-index: 1; opacity: 0.6;">
+                            </div>
+                            <!-- Foreground Content -->
+                            <div class="text-center p-3 position-relative" style="z-index: 2; padding-top: 4rem;">
+                                <img src="./Images/Douglas.png" alt="Professor" class="rounded-circle mb-3"
+                                    style="width: 100px; height: 100px; object-fit: cover;">
+                                <h5 class="mt-2">Douglas Folsom</h5>
+                                <p class="text-muted">Physics Professor</p>
+                                <p class="small">PHYS 101, PHYS 102, PHYS 110</p>
+                                <p class="small">Expert in thermodynamics and engineering physics.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hector Gamero-Jauregui -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card shadow-sm position-relative" style="overflow: hidden;">
+                            <!-- Background Image -->
+                            <div
+                                style="height: 30%; width: 100%; background: url('./Images/HectorsBG.png') no-repeat center center; background-size: cover; position: absolute; top: 0; z-index: 1; opacity: 0.6;">
+                            </div>
+                            <!-- Foreground Content -->
+                            <div class="text-center p-3 position-relative" style="z-index: 2; padding-top: 4rem;">
+                                <img src="./Images/Hector.jpeg" alt="Professor" class="rounded-circle mb-3"
+                                    style="width: 100px; height: 100px; object-fit: cover;">
+                                <h5 class="mt-2">Hector Gamero-Jauregui</h5>
+                                <p class="text-muted">Engineering Professor</p>
+                                <p class="small">ENGR 101, ENGR 105, ENGR 116, ENGR 117 </p>
+                                <p class="small">Focuses on astrophysics and cosmology.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Amy Swearngin -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card shadow-sm position-relative" style="overflow: hidden;">
+                            <!-- Background Image -->
+                            <div
+                                style="height: 30%; width: 100%; background: url('./Images/AmysBG.png') no-repeat center center; background-size: cover; position: absolute; top: 0; z-index: 1; opacity: 0.6;">
+                            </div>
+                            <!-- Foreground Content -->
+                            <div class="text-center p-3 position-relative" style="z-index: 2; padding-top: 4rem;">
+                                <img src="./Images/Amy.png" alt="Professor" class="rounded-circle mb-3"
+                                    style="width: 100px; height: 100px; object-fit: cover;">
+                                <h5 class="mt-2">Amy Swearngin</h5>
+                                <p class="text-muted">Assistant Physics Professor</p>
+                                <p class="small">PHYS 105, PHYS 106, PHYS 110, PHYS 111</p>
+                                <p class="small">Expert in thermodynamics and materials science.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ron Ferril -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card shadow-sm position-relative" style="overflow: hidden;">
+                            <!-- Background Image -->
+                            <div
+                                style="height: 30%; width: 100%; background: url('./Images/Physics\ Building.png') no-repeat center center; background-size: cover; position: absolute; top: 0; z-index: 1; opacity: 0.6;">
+                            </div>
+                            <!-- Foreground Content -->
+                            <div class="text-center p-3 position-relative" style="z-index: 2; padding-top: 4rem;">
+                                <img src="./Images/Ron.png" alt="Professor" class="rounded-circle mb-3"
+                                    style="width: 100px; height: 100px; object-fit: cover;">
+                                <h5 class="mt-2">Ron Ferril</h5>
+                                <p class="text-muted">Lab Tech / Physics Professor</p>
+                                <p class="small">PHYS 102, PHYS 101</p>
+                                <p class="small">Physicist and lab technician for the Physics and Engineering Department
+                                    at SBCC.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Louise Bretz -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card shadow-sm position-relative" style="overflow: hidden;">
+                            <!-- Background Image -->
+                            <div
+                                style="height: 30%; width: 100%; background: url('./Images/physbanner.jpg') no-repeat center center; background-size: cover; position: absolute; top: 0; z-index: 1; opacity: 0.6;">
+                            </div>
+                            <!-- Foreground Content -->
+                            <div class="text-center p-3 position-relative" style="z-index: 2; padding-top: 4rem;">
+                                <img src="./Images/louisB.png" alt="Professor" class="rounded-circle mb-3"
+                                    style="width: 100px; height: 100px; object-fit: cover;">
+                                <h5 class="mt-2">Louise Bretz</h5>
+                                <p class="text-muted">Physics Professor</p>
+                                <p class="small">PHYS 101, PHYS 102, PHYS 105</p>
+                                <p class="small">Expert in thermodynamics and materials science.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Lynne Stark -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card shadow-sm position-relative" style="overflow: hidden;">
+                            <!-- Background Image -->
+                            <div
+                                style="height: 30%; width: 100%; background: url('./Images/physbanner.jpg') no-repeat center center; background-size: cover; position: absolute; top: 0; z-index: 1; opacity: 0.6;">
+                            </div>
+                            <!-- Foreground Content -->
+                            <div class="text-center p-3 position-relative" style="z-index: 2; padding-top: 4rem;">
+                                <img src="./Images/stark.jpg" alt="Professor" class="rounded-circle mb-3"
+                                    style="width: 100px; height: 100px; object-fit: cover;">
+                                <h5 class="mt-2">Lynne Stark</h5>
+                                <p class="text-muted">Physical Science Proffessor</p>
+                                <p class="small">PHSC 103</p>
+                                <p class="small">Expert in thermodynamics and materials science.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="hero youtube-hero text-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="title">SBCC Physics YouTube</h2>
+                        <p>Stay updated with our latest lectures.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/tDs4cFOqTdM?start=43"
+                                title="SBCC Physics YouTube Channel" allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full-Width, Zero White Space Image Hero -->
+        <section id="resourcesHero" class="position-relative" style="margin: 0; padding: 0;">
+        
+            <!-- The Hero Image Covering the Entire Width -->
+            <img src="./Images/Resources.png" alt="Resources Hero" class="w-100"
+                style="display: block; margin: 0; padding: 0;" />
+        
+            <!-- Title and Button, top-left over the image -->
+            <div style="
+              position: absolute;
+              top: 40px;         /* vertical spacing from top */
+              left: 80px;        /* moved further right */
+              color: #fff;       /* white text */
+            ">
+                <h2 style="font-size: 2rem; margin-bottom: 0.5rem; color: #fff;">
+                    Resources
+                </h2>
+        
+                <!-- Outline button in Bootstrap (btn-outline-light) for a white outline -->
+                <a href="#" class="btn btn-outline-light">
+                    Learn More
+                </a>
+            </div>
+        </section>
+
+
+
+
+
+        
+
+        <section class="hero circle bg-light">
+            <div id="physicsNewsBg">
+            <div class="container">
+                <h2 class="mb-4 title ">Physics News</h2>
+        
+                <div class="row justify-content-center">
+        
+                    <!-- (1) Quantum Physics -->
+                    <div class="col-auto m-3">
+                        <div class="news-card">
+                            <div class="news-card__icons">
+                                
+                            </div>
+                            <div class="news-card__image"
+                                style="background: url('./Images/Physics news/QuantumPhysics.png') center/cover;">
+                            </div>
+                            <div class="news-card__info">
+                                <span class="news-card__page">Physics Discovery</span>
+                                <a href="https://www.sciencealert.com/quantum-teleportation-achieved-over-internet-for-first-time"
+                                    class="news-card__title" target="_blank">
+                                    Quantum Physics - Teleporting Toward a Quantum Internet
+                                </a>
+                                <p class="news-card__content">
+                                    New experiments in Calgary tested quantum teleportation in actual infrastructure,
+                                    representing a major step forward for the technology.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- (2) AI Expands Potential -->
+                    <div class="col-auto m-3">
+                        <div class="news-card">
+                            
+                            <div class="news-card__image"
+                                style="background: url('./Images/Physics news/AIPhysics.png') center/cover;">
+                            </div>
+                            <div class="news-card__info">
+                                <span class="news-card__page">Innovative Engineering</span>
+                                <a href="https://www.cmu.edu/news/stories/archives/2024/november/ai-expands-potential-for-discovery-in-physics"
+                                    class="news-card__title" target="_blank">
+                                    AI Expands Potential for Discovery in Physics
+                                </a>
+                                <p class="news-card__content">
+                                    Carnegie Mellon physicists use AI to analyze large datasets, predict complex phenomena,
+                                    and optimize simulations.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- (3) Dark Energy -->
+                    <div class="col-auto m-3">
+                        <div class="news-card">
+                            
+                            <div class="news-card__image"
+                                style="background: url('./Images/Physics news/DarkEnergy.png') center/cover;">
+                            </div>
+                            <div class="news-card__info">
+                                <span class="news-card__page">Cosmology</span>
+                                <a href="https://www.dailykos.com/stories/2024/12/27/2293949/-14-Billion-Years-of-Lies-is-Dark-Energy-about-to-be-Solved"
+                                    class="news-card__title" target="_blank">
+                                    14 Billion Years of Lies - is Dark Energy about to be "Solved"?
+                                </a>
+                                <p class="news-card__content">
+                                    Long thought to drive the universe's accelerated expansion, dark energy is now questioned,
+                                    with groundbreaking research suggesting it may not exist.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- (4) Gravitational Waves -->
+                    <div class="col-auto m-3">
+                        <div class="news-card">
+                            
+                            <div class="news-card__image"
+                                style="background: url('./Images/Physics news/Antennae.png') center/cover;">
+                            </div>
+                            <div class="news-card__info">
+                                <span class="news-card__page">Space Exploration</span>
+                                <a href="https://physics.aps.org/articles/v16/118" class="news-card__title" target="_blank">
+                                    Researchers Capture Gravitational-Wave Background with Pulsar “Antennae”
+                                </a>
+                                <p class="news-card__content">
+                                    Nanohertz gravitational waves revealed: Pulsar “antennae” confirm a cosmic background hum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- (5) Phys.org (Additional Relevant Site #1) -->
+                    <div class="col-auto m-3">
+                        <div class="news-card">
+                            
+                            <div class="news-card__image"
+                                style="background: url('./Images/Physics news/physorg.png') center/cover;">
+                            </div>
+                            <div class="news-card__info">
+                                <span class="news-card__page">Physics News & Research</span>
+                                <a href="https://phys.org/physics-news/" class="news-card__title" target="_blank">
+                                    Phys.org - Latest Physics News
+                                </a>
+                                <p class="news-card__content">
+                                    Stay up-to-date on breaking physics discoveries and developments from around the globe.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- (6) ScienceDaily (Additional Relevant Site #2) -->
+                    <div class="col-auto m-3">
+                        <div class="news-card">
+                            <div class="news-card__icons">
+                                
+                            </div>
+                            <div class="news-card__image"
+                                style="background: url('./Images/Physics news/sciencedaily.png') center/cover;">
+                            </div>
+                            <div class="news-card__info">
+                                <span class="news-card__page">Physics & Astronomy</span>
+                                <a href="https://www.sciencedaily.com/news/matter_energy/physics/" class="news-card__title"
+                                    target="_blank">
+                                    ScienceDaily - Physics News
+                                </a>
+                                <p class="news-card__content">
+                                    Discover the latest physics headlines, research articles, and feature stories all in one
+                                    place.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <section class="footer">
+            <div class="container">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                    <p class="col-md-4 mb-0 text-body-secondary">© 2024 SBCC Web Development Club</p>
+
+                    <a href="/"
+                        class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32">
+                            <use xlink:href="#bootstrap"></use>
+                        </svg>
+                    </a>
+
+                    <ul class="nav col-md-4 justify-content-end">
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+                    </ul>
+                </footer>
+            </div>
+        </section>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>

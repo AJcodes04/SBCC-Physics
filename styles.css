@@ -1,0 +1,308 @@
+/* General Styles for the Body Element */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Styles for the Navbar */
+.navbar {
+    background-color: #991c2d;
+    padding: 20px 0;
+}
+
+.navbar .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .nav-link {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.navbar .nav-link:hover {
+    text-decoration: underline;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.navbar .dropdown-menu {
+    background-color: #991c2d;
+}
+
+.navbar .dropdown-item {
+    color: white;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: #d90429;
+}
+
+/* Styles for the Hero Sections */
+.hero {
+    padding: 50px 0;
+}
+
+.hero .title {
+    color: #991c2d;
+    font-size: 35px;
+}
+
+/* Styles for Card Components */
+.card {
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.news-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.navbar-brand img {
+    width: 80px;
+    /* Adjust the width to make the image smaller */
+    height: auto;
+    /* Keeps the aspect ratio intact */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 600px;
+    /* Adjust the height to a consistent size */
+    object-fit: cover;
+    /* Ensures the image covers the container without stretching */
+}
+
+.circle {
+    background-color: #f8f9fa;
+    background-image: radial-gradient(circle, rgba(153, 28, 45, 0.1) 0px, transparent 0px);
+    background-size: 20px 20px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Three even columns */
+    grid-auto-rows: 300px;
+    /* Increased base height for rows */
+    gap: 1.5rem;
+    /* Adjusted spacing between grid items */
+}
+
+.news-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    /* Slightly larger corner radius for larger cards */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* Ensures cards fill the grid area */
+}
+
+.news-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover img {
+    transform: scale(1.05);
+    /* Slight zoom effect on hover */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    /* Lighter overlay for readability */
+    color: #333;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+.overlay h5 {
+    font-size: 1.5rem;
+    /* Larger font size for titles */
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+.overlay h5 a {
+    color: #991c2d;
+    /* Red for links */
+    text-decoration: none;
+    transition: text-decoration 0.3s ease, color 0.3s ease;
+}
+
+.overlay h5 a:hover {
+    text-decoration: underline;
+    color: #d90429;
+    /* Slightly lighter red on hover */
+}
+
+.overlay p {
+    font-size: 1.2rem;
+    /* Larger font size for text */
+    margin: 0;
+}
+
+.news-card.tall {
+    grid-row: span 3;
+    /* Taller item spans three rows */
+}
+
+.news-card.wide {
+    grid-column: span 2;
+    /* Wider item spans two columns */
+    grid-row: span 2;
+    /* Makes it larger vertically too */
+}
+
+.news-card.small {
+    grid-row: span 2;
+    /* Increased size of small cards */
+    grid-column: span 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns for smaller screens */
+        grid-auto-rows: 250px;
+        /* Slightly smaller rows on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+        /* Single column for very small screens */
+        grid-auto-rows: 200px;
+    }
+}
+
+
+/* Hero Section Styling */
+.hero {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+    /* Light gray background */
+}
+
+/* Profile Card */
+.profile-card {
+    background: white;
+    border-radius: 12px;
+    /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Profile Info (Text Section) */
+.profile-info h1 {
+    color: black;
+    /* SBCC red */
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.profile-info p {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Profile Image */
+.profile-image img {
+    width: 300px;
+    /* Adjust width as needed */
+    height: 400px;
+    /* Slightly taller rectangle */
+    object-fit: cover;
+    border-radius: 8px;
+    /* Subtle rounding for professionalism */
+    border: 3px solid black;
+    /* Red border to match theme */
+}
+
+/* Schedule Hero */
+.hero {
+    padding: 60px 0;
+}
+
+.schedule-table {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.schedule-table .row {
+    margin-bottom: 20px;
+}
+
+.schedule-table .class-block {
+    background-color: #991c2d;
+    /* SBCC red */
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Slight shadow */
+}
+
+.schedule-table .class-block.bg-light-red {
+    background-color: #d90429;
+    /* Lighter red for variety */
+}
+
+/* Title Styling */
+.title {
+    font-size: 2rem;
+    color: #991c2d;
+    /* SBCC red */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .schedule-table .row {
+        flex-wrap: wrap;
+    }
+
+    .schedule-table .col {
+        flex: 0 0 100%;
+        margin-bottom: 10px;
+    }
+}
+
