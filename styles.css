@@ -1,52 +1,132 @@
-/* General Styles for the Body Element */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* ===================================================
+   General Styles for the Body Element
+   =================================================== */
 body {
-    background-color: #f8f9fa;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
     color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    font-weight: 400;
+    /* Medium weight for better readability */
 }
 
-/* Styles for the Navbar */
+/* ===================================================
+   Typography
+   =================================================== */
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    /* Semi-bold for emphasis */
+    color: #333;
+    line-height: 1.3;
+    margin: 1em 0 0.5em;
+}
+
+/* Paragraphs and Text */
+p,
+.small,
+.text-muted {
+    font-weight: 400;
+    color: #333;
+    margin: 0 0 1em;
+}
+
+/* ===================================================
+   Navbar Styling
+   =================================================== */
 .navbar {
     background-color: #991c2d;
+    /* SBCC Red */
+    font-size: 0.9rem;
     padding: 20px 0;
 }
 
-.navbar .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.navbar .nav-link {
-    color: white;
-    font-weight: bold;
+.navbar a {
+    color: #fff;
     text-decoration: none;
-    transition: text-decoration 0.3s ease;
-    font-size: 1.2rem;
+    font-weight: 300;
+    /* Light weight */
+    padding: 0.75rem 1rem;
+    display: inline-block;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-.navbar .nav-link:hover {
+.navbar a:hover,
+.navbar a:focus {
+    color: #d90429;
+    /* Lighter Red on Hover */
     text-decoration: underline;
 }
 
-.navbar .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
+.navbar .nav-link.active {
+    text-decoration: underline;
+    color: #d90429 !important;
+    /* Distinct color to indicate active page */
 }
 
+/* Dropdown Menu Styling */
 .navbar .dropdown-menu {
     background-color: #991c2d;
+    /* SBCC Red */
 }
 
 .navbar .dropdown-item {
-    color: white;
+    color: #fff;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.navbar .dropdown-item:hover {
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
     background-color: #d90429;
+    /* Lighter Red on Hover */
+    color: #fff;
 }
 
-/* Styles for the Hero Sections */
+/* ===================================================
+   Navbar Link Font Size Adjustment
+   =================================================== */
+
+/* Increase font size for navbar links */
+.navbar .nav-link {
+    font-size: 1.1rem;
+    /* Adjust this value as needed */
+}
+
+/* ===================================================
+   Custom Text Color Classes
+   =================================================== */
+/* Custom SBCC Red Text Color */
+.text-sbcc-red {
+    color: #991c2d !important;
+    /* SBCC Red */
+}
+
+/* Class Resources Header Styling */
+.class-resources-header {
+    color: #000 !important;
+    /* Black Color */
+}
+
+/* ===================================================
+   Hero Sections
+   =================================================== */
 .hero {
-    padding: 50px 0;
+    padding: 60px 0;
+    background-color: #f8f9fa;
+    /* Light Gray Background */
 }
 
 .hero .title {
@@ -54,216 +134,274 @@ body {
     font-size: 35px;
 }
 
-/* Styles for Card Components */
-.card {
-    border: none;
-    transition: transform 0.3s ease;
+/* YouTube Hero Section */
+.youtube-hero {
+    background-color: #343a40;
+    /* Dark Gray */
 }
 
-.card:hover {
-    transform: scale(1.05);
+.youtube-hero .title,
+.youtube-hero h2,
+.youtube-hero p,
+.youtube-hero a,
+.youtube-hero li {
+    color: #fff !important;
+    /* White Text */
 }
 
-.card img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin: 0 auto;
+/* ===================================================
+   Profile Card Styling
+   =================================================== */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.news-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+@media (min-width: 768px) {
+    .profile-card {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
 }
-.navbar-brand img {
-    width: 80px;
-    /* Adjust the width to make the image smaller */
+
+/* Profile Image Styling */
+.profile-img {
+    width: 200px;
     height: auto;
-    /* Keeps the aspect ratio intact */
+    object-fit: cover;
+    border-radius: 8px;
+    /* Slight Rounding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle Shadow */
 }
 
+/* Ensure profile images scale appropriately */
+.profile-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===================================================
+   Carousel Styling
+   =================================================== */
 .carousel-item img {
     width: 100%;
     height: 600px;
-    /* Adjust the height to a consistent size */
     object-fit: cover;
-    /* Ensures the image covers the container without stretching */
-}
-
-.circle {
-    background-color: #f8f9fa;
-    background-image: radial-gradient(circle, rgba(153, 28, 45, 0.1) 0px, transparent 0px);
-    background-size: 20px 20px;
-}
-
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* Three even columns */
-    grid-auto-rows: 300px;
-    /* Increased base height for rows */
-    gap: 1.5rem;
-    /* Adjusted spacing between grid items */
-}
-
-.news-card {
+    /* Diagonal Line Overlays */
     position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    /* Slightly larger corner radius for larger cards */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    /* Ensures cards fill the grid area */
 }
 
-.news-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.news-card:hover img {
-    transform: scale(1.05);
-    /* Slight zoom effect on hover */
-}
-
-.overlay {
+.carousel-item::before,
+.carousel-item::after {
+    content: "";
     position: absolute;
-    bottom: 0;
+    z-index: 2;
+    pointer-events: none;
+    width: 50%;
+    height: 50%;
+    background-image: repeating-linear-gradient(45deg,
+            rgba(255, 255, 255, 0.8) 0,
+            rgba(255, 255, 255, 0.8) 2px,
+            transparent 2px,
+            transparent 6px);
+    background-size: 6px 6px;
+    opacity: 0.2;
+}
+
+.carousel-item::before {
+    top: 0;
     left: 0;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.carousel-item::after {
+    bottom: 0;
+    right: 0;
+    clip-path: polygon(100% 100%, 100% 0, 0 100%);
+}
+
+/* ===================================================
+   Card Components
+   =================================================== */
+/* General Card Styling */
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* News Card Styling */
+.news-card {
+    width: 300px;
+    height: 325px;
+    background: #e8e8e8;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    color: #212121;
+    border: 2px solid #ab4b38;
+    transition: all 0.5s ease;
+}
+
+.news-card__icons {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.news-card__image {
     width: 100%;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.8);
-    /* Lighter overlay for readability */
-    color: #333;
-    text-align: center;
-    transition: opacity 0.3s ease;
+    height: 148px;
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.3s ease;
+}
+
+.news-card__info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 15px;
+    gap: 3px;
+}
+
+.news-card__page {
+    font-size: 13px;
+    font-weight: 100;
+}
+
+.news-card__title {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+    color: black;
+    transition: color 0.5s ease;
+}
+
+.news-card__content {
+    font-size: 14px;
+}
+
+.news-card:hover {
+    box-shadow: 5px 5px 10px 0px #ab4b3866;
+}
+
+.news-card:hover .news-card__icons {
+    z-index: 1;
     opacity: 1;
 }
 
-.overlay h5 {
-    font-size: 1.5rem;
-    /* Larger font size for titles */
-    font-weight: bold;
-    margin-bottom: 0.75rem;
+.news-card:hover .news-card__image {
+    filter: brightness(0.8);
 }
 
-.overlay h5 a {
+.news-card:hover .news-card__title {
+    color: #ab4b38;
+}
+
+/* Class Resources Links Styling */
+.class-resources a {
     color: #991c2d;
-    /* Red for links */
-    text-decoration: none;
-    transition: text-decoration 0.3s ease, color 0.3s ease;
+    /* SBCC Red */
 }
 
-.overlay h5 a:hover {
-    text-decoration: underline;
+.class-resources a:hover {
     color: #d90429;
-    /* Slightly lighter red on hover */
+    /* Lighter Red on Hover */
 }
 
-.overlay p {
-    font-size: 1.2rem;
-    /* Larger font size for text */
-    margin: 0;
+/* ===================================================
+   Underlined Title Animation
+   =================================================== */
+.underlined-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0.5rem;
 }
 
-.news-card.tall {
-    grid-row: span 3;
-    /* Taller item spans three rows */
+.underlined-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #fff;
+    transition: width 0.3s ease;
 }
 
-.news-card.wide {
-    grid-column: span 2;
-    /* Wider item spans two columns */
-    grid-row: span 2;
-    /* Makes it larger vertically too */
+.underlined-title:hover::after {
+    width: 100%;
 }
 
-.news-card.small {
-    grid-row: span 2;
-    /* Increased size of small cards */
-    grid-column: span 1;
+/* ===================================================
+   Footer Styling
+   =================================================== */
+.footer {
+    background-color: #f8f9fa;
 }
 
-/* Responsive Adjustments */
+.footer .nav-link {
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+.footer .nav-link:hover {
+    color: #495057;
+}
+
+.footer p {
+    color: #6c757d;
+}
+
+/* ===================================================
+   Responsive Design
+   =================================================== */
+/* News Grid Responsive */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    gap: 1.5rem;
+}
+
 @media (max-width: 768px) {
     .news-grid {
         grid-template-columns: repeat(2, 1fr);
-        /* Two columns for smaller screens */
         grid-auto-rows: 250px;
-        /* Slightly smaller rows on smaller screens */
     }
 }
 
 @media (max-width: 576px) {
     .news-grid {
         grid-template-columns: 1fr;
-        /* Single column for very small screens */
         grid-auto-rows: 200px;
     }
 }
 
-
-/* Hero Section Styling */
-.hero {
-    padding: 60px 0;
-    background-color: #f8f9fa;
-    /* Light gray background */
-}
-
-/* Profile Card */
-.profile-card {
-    background: white;
-    border-radius: 12px;
-    /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
-    display: flex;
-    justify-content: space-between;
-}
-
-/* Profile Info (Text Section) */
-.profile-info h1 {
-    color: black;
-    /* SBCC red */
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.profile-info p {
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Profile Image */
-.profile-image img {
-    width: 300px;
-    /* Adjust width as needed */
-    height: 400px;
-    /* Slightly taller rectangle */
-    object-fit: cover;
-    border-radius: 8px;
-    /* Subtle rounding for professionalism */
-    border: 3px solid black;
-    /* Red border to match theme */
-}
-
-/* Schedule Hero */
-.hero {
-    padding: 60px 0;
-}
-
+/* Schedule Table Responsive */
 .schedule-table {
     background-color: #f8f9fa;
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
 }
 
 .schedule-table .row {
@@ -272,29 +410,20 @@ body {
 
 .schedule-table .class-block {
     background-color: #991c2d;
-    /* SBCC red */
+    /* SBCC Red */
     color: white;
     padding: 10px;
     border-radius: 8px;
     text-align: center;
     margin-bottom: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Slight shadow */
 }
 
 .schedule-table .class-block.bg-light-red {
     background-color: #d90429;
-    /* Lighter red for variety */
+    /* Lighter Red */
 }
 
-/* Title Styling */
-.title {
-    font-size: 2rem;
-    color: #991c2d;
-    /* SBCC red */
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
     .schedule-table .row {
         flex-wrap: wrap;
@@ -305,4 +434,195 @@ body {
         margin-bottom: 10px;
     }
 }
+
+/* ===================================================
+   Additional Custom Styles
+   =================================================== */
+/* Custom Header Bar */
+#block-header-bar {
+    background-color: #333;
+    height: 30px;
+    padding: 0 20px;
+    font-size: 0.9rem;
+}
+
+/* Ensuring consistency in link colors across the site */
+a {
+    color: #991c2d;
+    /* SBCC Red */
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    color: #d90429;
+    /* Lighter Red on Hover */
+    text-decoration: underline;
+}
+
+/* Ensuring profile images are not distorted */
+.profile-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Additional Classes to Avoid Redundancy */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: #fff;
+}
+
+/* ===================================================
+   Media Queries for Enhanced Responsiveness
+   =================================================== */
+@media (max-width: 768px) {
+
+    /* Adjust carousel image height on smaller screens */
+    .carousel-item img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* Adjust carousel image height on very small screens */
+    .carousel-item img {
+        height: 300px;
+    }
+}
+
+/* ===================================================
+   Override Bootstrap Defaults if Necessary
+   =================================================== */
+/* Example: Adjusting navbar-brand image size */
+.navbar-brand img {
+    width: 80px;
+    height: auto;
+}
+
+/* Ensure dropdown menus are correctly aligned */
+.navbar .dropdown-menu {
+    min-width: 200px;
+}
+
+/* Ensure the footer links are spaced out evenly */
+.footer .nav {
+    gap: 1rem;
+}
+
+/* ===================================================
+   Hero Section Styling
+   =================================================== */
+.hero-section {
+    background-color: #991c2d;
+    /* SBCC Red Background */
+    color: #fff;
+    /* Set default text color to white */
+}
+
+.hero-section a {
+    color: #fff !important;
+    /* Ensure links are white */
+}
+
+.hero-section h3,
+.hero-section p {
+    color: #fff !important;
+    /* Ensure headings and paragraphs are white */
+}
+
+/* Optional: Remove pointer cursor for links if you want them to appear non-clickable */
+.hero-section a {
+    cursor: pointer;
+    /* Change to 'default' if you want them to appear non-clickable */
+}
+
+/* Ensure SVG icons inherit the white color */
+.hero-section .icon-square svg {
+    fill: #fff;
+    /* Set SVG fill to white */
+}
+
+/* ===================================================
+   Underlined Title Styling (if not already present)
+   =================================================== */
+.underlined-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.underlined-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.underlined-title:hover::after {
+    width: 100%;
+}
+
+/* Remove white space below the footer */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* General footer styling */
+.footer {
+    background-color: #991c2d;
+    color: white;
+    width: 100%;
+    padding: 20px 0;
+    /* Adds vertical padding for a larger footer */
+    text-align: center;
+    /* Centers text content */
+}
+
+.footer footer {
+    padding: 20px 0;
+    /* Adds more padding inside the footer element */
+}
+
+.footer img {
+    max-height: 60px;
+    /* Ensures the logo is visible but not overwhelming */
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+/* Default Light Mode Styles */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.navbar {
+    background-color: #991c2d;
+}
+
+.footer {
+    background-color: #991c2d;
+    color: white;
+}
+
+
 
