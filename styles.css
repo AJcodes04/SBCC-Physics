@@ -157,13 +157,15 @@ p,
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    /* Default on mobile */
 }
 
 @media (min-width: 768px) {
     .profile-card {
         flex-direction: row;
         align-items: flex-start;
-        justify-content: space-between;
+        /* CHANGED from 'space-between' to 'flex-start' to reduce the gap */
+        justify-content: flex-start;
     }
 }
 
@@ -548,30 +550,6 @@ a:focus {
     /* Set SVG fill to white */
 }
 
-/* ===================================================
-   Underlined Title Styling (if not already present)
-   =================================================== */
-.underlined-title {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 0.5rem;
-}
-
-.underlined-title::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 2px;
-    width: 0;
-    background-color: #fff;
-    transition: width 0.3s ease;
-}
-
-.underlined-title:hover::after {
-    width: 100%;
-}
-
 /* Remove white space below the footer */
 html,
 body {
@@ -609,6 +587,7 @@ body {
 .footer a:hover {
     text-decoration: underline;
 }
+
 /* Default Light Mode Styles */
 body {
     background-color: #f8f9fa;
@@ -624,5 +603,249 @@ body {
     color: white;
 }
 
+/* Mike Young Hero Section with Blurred Background */
+.mike-young-hero {
+    position: relative;
+    min-height: 600px;
+    /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
+/* Background Image */
+.mike-young-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./Images/YoungsBG.png') no-repeat center center / cover;
+    filter: blur(5px) brightness(0.8);
+    /* Apply blur and lighten */
+    z-index: -2;
+    /* Place behind all other elements */
+}
 
+/* Fade-Out Gradient */
+.mike-young-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, white 100%);
+    z-index: -1;
+    /* Place above the blurred background */
+}
+
+/* Content Styling */
+.mike-young-hero .profile-card {
+    position: relative;
+    z-index: 1;
+    /* Ensure content appears above the background and gradient */
+    background-color: #ffffff;
+    /* Explicitly set background to white */
+    border-radius: 10px;
+    /* Optional: keep corners rounded */
+}
+
+/* Image won't shrink */
+.profile-image {
+    flex-shrink: 0;
+    /* no shrinking */
+}
+
+/* Optionally fix the image width if you like */
+.profile-img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* .btn-53 from Uiverse.io, adapted for SBCC Red hover, smaller size, white hover text */
+.btn-53,
+.btn-53 *,
+.btn-53 :after,
+.btn-53 :before,
+.btn-53:after,
+.btn-53:before {
+    border: 0;
+    box-sizing: border-box;
+}
+
+.btn-53 {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    /* Default: black background */
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    /* or your preferred font */
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+
+    /* Smaller button size */
+    border: 1px solid;
+    border-radius: 999px;
+    font-weight: 900;
+    overflow: hidden;
+    padding: 0.5rem 1.25rem;
+    /* <--- decreased from 1rem 2rem */
+    position: relative;
+    text-transform: uppercase;
+}
+
+.btn-53:disabled {
+    cursor: default;
+}
+
+/* The white overlay that slides away on hover */
+.btn-53 .original {
+    background: #fff;
+    color: #000;
+    display: grid;
+    place-content: center;
+    position: absolute;
+    inset: 0;
+    /* Fill the parent */
+    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.btn-53:hover .original {
+    transform: translateY(100%);
+}
+
+/* The "letters" that appear from behind the overlay */
+.btn-53 .letters {
+    display: inline-flex;
+}
+
+/* 
+  - Make each span start off hidden & positioned
+  - Then fade/slide in on hover 
+  - color: #fff ensures white text 
+*/
+.btn-53 span {
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: transform 0.2s, opacity 0.2s;
+    color: #fff;
+    /* <--- ensure text is white */
+}
+
+/* Even-indexed letters tilt the other way initially */
+.btn-53 span:nth-child(2n) {
+    transform: translateY(15px);
+}
+
+/* Reveal each letter in sequence on hover */
+.btn-53:hover span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-53:hover span:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.btn-53:hover span:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.btn-53:hover span:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.btn-53:hover span:nth-child(5) {
+    transition-delay: 0.4s;
+}
+
+.btn-53:hover span:nth-child(6) {
+    transition-delay: 0.5s;
+}
+
+/* ... add more lines if your word is longer */
+
+/* On hover, reveal SBCC Red background */
+.btn-53:hover {
+    background-color: #991c2d !important;
+    /* SBCC Red */
+}
+
+/* 
+  .card-trace 
+  -------------
+  1) Positions the card so we can place a pseudo-element on top.
+  2) Hides the default border (we’re using the pseudo-element instead).
+*/
+.card-trace {
+    position: relative;
+    border: 0;
+    /* in case some cards had a border */
+    overflow: visible;
+    /* ensure the pseudo-element is visible outside if needed */
+}
+
+/* 
+   Pseudo-element will “draw” an outline around the card 
+   when hovered. 
+*/
+.card-trace::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Start with 0 width/height => invisible border */
+    width: 0;
+    height: 0;
+    /* The outline’s style and color: SBCC Red (#991c2d), 2px thickness */
+    border: 2px solid #991c2d;
+    /* Match card’s border-radius if desired */
+    border-radius: 0.25rem;
+    /* or whatever your card's radius is */
+
+    box-sizing: border-box;
+    pointer-events: none;
+    /* ensures it doesn’t block clicks */
+}
+
+/* 
+   Animate the pseudo-element from 0 → 100% 
+   on hover using a keyframes animation.
+*/
+.card-trace:hover::before {
+    animation: trace-outline 0.6s forwards ease-in-out;
+}
+
+/* 
+   Keyframes for the “draw” effect:
+   - First expands the width to 100% 
+   - Then expands the height to 100%
+*/
+@keyframes trace-outline {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    50% {
+        width: 100%;
+        height: 0;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
